@@ -23,8 +23,11 @@ public class Main {
 	}
 
 	public static void calcular() throws Exception{
+		
 		int cont = 0;
 		String expressao = "";
+		String aux = "";
+
 		for(int i = 0; i < TabelaDeSimbolos.VALOR.size(); i++){
 
 			System.out.println(TabelaDeSimbolos.VALOR.get(i));
@@ -48,9 +51,12 @@ public class Main {
 			if(TabelaDeSimbolos.VALOR.get(i).equals("^")){
 				String antes = TabelaDeSimbolos.VALOR.get(i - 1);
 				String depois = TabelaDeSimbolos.VALOR.get(i + 1);
-				expressao += "Math.pow(" + antes + "," + depois + ")";
+				//expressao += " Math.pow("+antes+","+depois+")";
+				aux = "Math.pow("+antes+","+depois+")";
+				expressao += aux;
 				continue;
 			}
+			System.out.println(expressao);
 			
 		}
 
@@ -60,9 +66,11 @@ public class Main {
 		// create a JavaScript engine
 		ScriptEngine engine = factory.getEngineByName("JavaScript");
 		// evaluate Ja/vaScript code from String
-		Object obj = engine.eval(expressao);
-		System.out.println (obj); // imprime "1.0"
-		System.out.println (obj.getClass()); // imprime "java.lang.Double"
+		//Object obj = engine.eval(expressao);
+		Object test = engine.eval(aux);
+		//System.out.println (obj); 
+		//System.out.println (obj.getClass()); 
+		System.out.println(test);
 		
 	}
 	
