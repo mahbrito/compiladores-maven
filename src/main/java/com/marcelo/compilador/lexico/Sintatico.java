@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Sintatico {
 
-	private String[][] M = new String[8][13];
+	private String[][] M = new String[8][11];
 	private Map<String, Integer> posicaoNaoTerminais = new HashMap<>();
 	private Map<String, Integer> posicaoTerminais = new HashMap<>();
 	private List<String> pilha = new ArrayList<>();
@@ -42,10 +42,8 @@ public class Sintatico {
 		posicaoTerminais.put("+", 6);
 		posicaoTerminais.put("(", 7);
 		posicaoTerminais.put(")", 8);
-		posicaoTerminais.put("exp", 9);
-		posicaoTerminais.put("[", 10);
-		posicaoTerminais.put("]", 11);
-		posicaoTerminais.put("$", 12);
+		posicaoTerminais.put("exp[F]", 9);
+		posicaoTerminais.put("$", 10);
 
 		M[0][0] = "";
 		M[0][1] = "id";
@@ -56,10 +54,8 @@ public class Sintatico {
 		M[0][6] = "+";
 		M[0][7] = "(";
 		M[0][8] = ")";
-		M[0][9] = "exp";
-		M[0][10] = "[";
-		M[0][11] = "]";
-		M[0][12] = "$";
+		M[0][9] = "exp[F]";
+		M[0][10] = "$";
 
 		M[1][0] = "E";
 		M[2][0] = "E'";

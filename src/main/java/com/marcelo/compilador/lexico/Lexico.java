@@ -12,7 +12,7 @@ public class Lexico {
 	private String[] arrayNumeros = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 	private String[] arrayOperacoes = { "+", "-", "*", "/", "^",};
 	private String[] arraySimbolos = { "(", ")", ".", "[", "]" };
-	private String[] arrayExp = {"exp"};
+	private String[] arrayExp = {"e", "x", "p"};
 
 	private List<String> bufferNumeros = new ArrayList<>();
 	private List<String> bufferExp = new ArrayList<>();
